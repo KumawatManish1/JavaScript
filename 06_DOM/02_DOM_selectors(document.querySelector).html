@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color:#fff
+        }
+    </style>
+</head>
+<body class="bg-black">
+    
+    <div>
+        <h1 id="title" class="heading">DOM Learning on chai aur code <span style="display:none">test text</span></h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <input type="password" name="" id="">
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+<!--
+//document.querySelector()
+
+ document.querySelector('h1') //will give the first h1
+<h1 id=​"title" class=​"heading">​"DOM Learning on chai aur code "<span style=​"display:​none">​test text​</span>​</h1>​
+
+document.querySelector('h2') //will give the first h2
+<h2>Lorem ipsum dolor sit amet.</h2>
+
+document.querySelector('#title')
+<h1 id=​"title" class=​"heading">​…​</h1>​
+
+document.querySelector('.heading')
+<h1 id=​"title" class=​"heading">​…​</h1>​ 
+
+document.querySelector('input[type="password"]')
+<input type=​"password" name id>​
+
+const myul = document.querySelector('ul')
+undefined
+myul.querySelector('li')
+<li>​…​</li>​
+const turnGreen = myul.querySelector('li')
+undefined
+turnGreen.style.backgroundColor = "green"
+'green'
+turnGreen.style.padding = "15px"
+'15px'
+
+
+
+//document.querySelectorAll()
+this gives a nodelist so we cant direct select a style but need to select the element by index in order to give the style
+
+const tempLiList  = myul.querySelectorAll('li')
+undefined
+tempLiList
+NodeList(3) [li, li, li]0: li1: li2: lilength: 3[[Prototype]]: NodeList
+
+const myli = document.querySelectorAll('h1')
+undefined
+myli
+NodeList [h1#title.heading]0: h1#title.headinglength: 1[[Prototype]]: NodeList
+
+myli.style.color = "green"
+VM2004:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+    at <anonymous>:1:18
+(anonymous) @ VM2004:1Understand this error
+myli[0].style.color = "green"
+'green'
+
+tempLiList
+NodeList(3) [li, li, li]
+tempLiList.forEach(function(l){
+   l.style.backgroundColor = 'green'; 
+})
+undefined
+
+
+-->
