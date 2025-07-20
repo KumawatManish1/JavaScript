@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color:#fff
+        }
+    </style>
+</head>
+<body class="bg-black">
+    
+    <div>
+        <h1 id="title" class="heading">DOM Learning on chai aur code <span style="display:none">test text</span></h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <input type="password" name="" id="">
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+document.getElementsByClassName('list-item')
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+const tempClassItem = document.getElementsByClassName('list-item')
+undefined
+
+tempClassItem                                                                   // HTMLCollection doesnt have for each loop so we need to cnvert them into Array
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+Array.from(tempClassItem)
+(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+const tempArr = Array.from(tempClassItem)
+undefined
+tempArr
+(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+tempArr.forEach((li) =>{
+    li.style.color = "orange"
+})
+undefined
+
+
+
+
